@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Sorte
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+  <ion-item>
+    <ion-label>Aposta</ion-label>
+    <ion-select [(ngModel)]="aposta">
+      <ion-option value="mega">MEGA</ion-option>
+      <ion-option value="quina">QUINA</ion-option>
+      <ion-option value="facil">FÁCIL</ion-option>     
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+ <button ion-fab (click)="sortear(aposta)" >Button</button>
+
 </ion-content>
