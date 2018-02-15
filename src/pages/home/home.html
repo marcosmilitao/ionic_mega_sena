@@ -8,17 +8,36 @@
 
 <ion-content padding>
   <ion-list>
-  <ion-item>
-    <ion-label>Aposta</ion-label>
-    <ion-select [(ngModel)]="aposta">
-      <ion-option value="mega">MEGA</ion-option>
-      <ion-option value="quina">QUINA</ion-option>
-      <ion-option value="facil">FÁCIL</ion-option>     
-    </ion-select>
-  </ion-item>
-</ion-list>
+    <ion-item>
+      <ion-label>Aposta</ion-label>
+      <ion-select [(ngModel)]="aposta">
+        <ion-option value="Mega">MEGA</ion-option>
+        <ion-option value="Quina">QUINA</ion-option>
+        <ion-option value="Facil">FÁCIL</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 
+  <ion-list>
 
- <button ion-fab (click)="sortear(aposta)" >Button</button>
+    <ion-item-sliding *ngFor="let jogo of arr_jogos">
+      
+        <ion-item>
+          {{jogo}}
+        </ion-item>
+
+        <ion-item-options>
+          <button ion-button color="danger" (click)="removeItem(jogo)">
+           <ion-icon name="trash"> Delete</ion-icon>          
+          </button>
+        </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <button ion-fab (click)="jogo(aposta)">
+   <ion-icon name="beer"></ion-icon>
+  </button>
 
 </ion-content>
