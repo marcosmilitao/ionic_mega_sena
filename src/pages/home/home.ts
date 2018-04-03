@@ -12,9 +12,7 @@ export class HomePage {
   }
   
   public arr_jogos: string[] = new Array();
-  // teste() {
-  //   alert(Math.floor(Math.random() * 9) + 1);
-  // }
+
   public removeItem(item){
  
     for(var i = 0; i < this.arr_jogos.length; i++) {
@@ -27,7 +25,7 @@ export class HomePage {
  
   }
   jogo(jogo) {
-    //var jogo = "Facil";
+    
     let flag: boolean = true;
     let numero_sorteado: number = 0;
     var teste = '';
@@ -81,8 +79,7 @@ export class HomePage {
     for (result = 0; result < arr_mega.length; result++) {
       teste = teste + arr_mega[result] + "-";
     }
-    //alert(teste);
-    
+       
     this.arr_jogos.push(teste.replace(/.$/,""));
     
   }
@@ -130,38 +127,22 @@ export class HomePage {
         break;
       //FACIL
       case "Facil":
-        // var arr_facil: number[] = new Array(15);
-        // for (var j = 0; j < 15; j++) {
-        //   while (flag == true) {
-        //     numero_sorteado = Math.floor(Math.random() * 25) + 1;
-        //     flag = false;
-        //     for (var m = 0; m < arr_facil.length; m++) {
-        //       if (arr_facil[m] == numero_sorteado) {
-        //         flag = true;
-        //       }
-        //     }
-        //     arr_facil[j] = numero_sorteado;
-
-        //   }
-
-
-        //   flag = true;
-        // }
+        
         var arr_facil: string[] = new Array(15);
 
-        for (var i = 0; i < 15; i++) {
+        for (var j = 0; j < 15; j++) {
 
           while (flag == true) {
             numero_sorteado = Math.floor(Math.random() * 25) + 1;
             flag = false;
-            for (var m = 0; m < arr_facil.length; m++) {
-              if (arr_facil[m] == numero_sorteado.toString() || arr_facil[m] == ("0" + numero_sorteado.toString())) {
+            for (var n = 0; n < arr_facil.length; n++) {
+              if (arr_facil[n] == numero_sorteado.toString() || arr_facil[n] == ("0" + numero_sorteado.toString())) {
                 flag = true;
               }
             }
-            arr_facil[i] = numero_sorteado.toString();
+            arr_facil[j] = numero_sorteado.toString();
             if (numero_sorteado < 10) {
-              arr_facil[i] = "0" + arr_facil[i];
+              arr_facil[j] = "0" + arr_facil[j];
             }
           }
           flag = true;
@@ -176,39 +157,22 @@ export class HomePage {
 
         break;
       case "Quina":
-        // alert("aeeeeee");
-        // var arr_quina: number[] = new Array(5);
-        // for (var l = 0; l < 5; l++) {
-        //   while (flag == true) {
-        //     numero_sorteado = Math.floor(Math.random() * 80) + 1;
-        //     flag = false;
-        //     for (var m = 0; m < arr_quina.length; m++) {
-        //       if (arr_quina[m] == numero_sorteado) {
-        //         flag = true;
-        //       }
-        //     }
-        //     arr_quina[l] = numero_sorteado;
-
-        //   }
-
-
-        //   flag = true;
-        // }
+       
         var arr_quina: string[] = new Array(5);
 
-        for (var i = 0; i < 5; i++) {
+        for (var k = 0; k < 5; k++) {
 
           while (flag == true) {
             numero_sorteado = Math.floor(Math.random() * 80) + 1;
             flag = false;
-            for (var m = 0; m < arr_quina.length; m++) {
-              if (arr_quina[m] == numero_sorteado.toString() || arr_quina[m] == ("0" + numero_sorteado.toString())) {
+            for (var p = 0; p < arr_quina.length; p++) {
+              if (arr_quina[p] == numero_sorteado.toString() || arr_quina[p] == ("0" + numero_sorteado.toString())) {
                 flag = true;
               }
             }
-            arr_quina[i] = numero_sorteado.toString();
+            arr_quina[k] = numero_sorteado.toString();
             if (numero_sorteado < 10) {
-              arr_quina[i] = "0" + arr_quina[i];
+              arr_quina[k] = "0" + arr_quina[k];
             }
           }
           flag = true;
